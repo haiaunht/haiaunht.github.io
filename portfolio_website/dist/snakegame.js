@@ -238,8 +238,10 @@ $(document).ready(function(){
 	function (){
 		clearInterval(game_loop);
 		game_sound.pause();
-		var stop_text = "GAME STOPPED!" ;
-		var show_score = "Your score: " + score;
+		if (stop_text != "GAME OVER") {
+			var stop_text = "GAME STOPPED!" ;
+			var show_score = "Your score: " + score;
+		}
 		ctx.font = "small-caps 50px arial";
 		ctx.fillText( stop_text,120, 130);
 		ctx.fillText( show_score,162, 200);
